@@ -95,10 +95,8 @@ class Installer extends TestCase
     {
         $finder = new PackageDiscoverCommand();
 
-        $vendorPath = realpath(__DIR__.'/../../../');
-
         $finder->write(
-            $finder->findFjordPackages($vendorPath)
+            $finder->findFjordPackages($this->vendorPath())
         );
     }
 
@@ -109,6 +107,17 @@ class Installer extends TestCase
      */
     public function orchestraPath()
     {
-        return __DIR__.'/../../../orchestra/testbench-core';
+        return $this->vendorPath().'/orchestra/testbench-core';
+    }
+
+    /**
+     * Gets path to vendor directory.
+     *
+     * @return string|bool
+     */
+    public function vendorPath()
+    {
+        return realpath(__DIR__.'/../vendor/')
+            ?: realpath(__DIR__.'/../../../');
     }
 }
