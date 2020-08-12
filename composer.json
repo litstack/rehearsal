@@ -8,7 +8,7 @@
 		}
 	],
 	"require": {
-		"composer-plugin-api": "^2.0",
+		"composer-plugin-api": "^1.1|^2.0",
 		"orchestra/testbench": "^5.3",
 		"aw-studio/fjord": "^2.4"
 	},
