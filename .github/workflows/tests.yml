@@ -13,16 +13,17 @@ jobs:
         strategy:
             fail-fast: true
             matrix:
-                composer: [v1, v2]
                 php: [7.4]
+                composer: [v1, v2]
+                fjord: [2.4]
                 laravel: [7.*]
                 include:
                     - laravel: 7.*
                       testbench: 5.*
 
         name:
-            P${{ matrix.php }} - L${{ matrix.laravel }} - C:${{ matrix.composer
-            }}
+            P${{ matrix.php }} - C:${{ matrix.composer }}- L${{ matrix.laravel
+            }} - FJ${{ matrix.fjord }}
 
         steps:
             - name: checkout
@@ -48,7 +49,7 @@ jobs:
 
             - name: Install dependencies
               run: |
-                  composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
+                  composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" "aw-studio/fjord:${{ matrix.fjord }}" --no-interaction --no-update
                   composer update --${{ matrix.dependency-version }} --prefer-dist --no-suggest
 
             - name: Execute tests
