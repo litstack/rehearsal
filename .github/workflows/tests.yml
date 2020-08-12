@@ -44,13 +44,13 @@ jobs:
                   extensions:
                       dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite,
                       pdo_sqlite
-                  tools: composer:{{ matrix.composer }}
+                  tools: composer:${{ matrix.composer }}
                   coverage: none
 
             - name: Install dependencies
               run: |
                   composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" "aw-studio/fjord:${{ matrix.fjord }}" --no-interaction --no-update
-                  composer update --${{ matrix.dependency-version }} --prefer-dist --no-suggest
+                  composer update --prefer-dist --no-suggest
 
             - name: Execute tests
               run: vendor/bin/phpunit
