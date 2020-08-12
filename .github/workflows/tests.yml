@@ -22,7 +22,7 @@ jobs:
                       testbench: 5.*
 
         name:
-            P${{ matrix.php }} - C:${{ matrix.composer }}- L${{ matrix.laravel
+            P${{ matrix.php }} - C:${{ matrix.composer }} - L${{ matrix.laravel
             }} - FJ${{ matrix.fjord }}
 
         steps:
