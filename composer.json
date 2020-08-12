@@ -1,6 +1,7 @@
 {
 	"name": "fjuse/testbench",
 	"type": "composer-plugin",
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "cbl",
