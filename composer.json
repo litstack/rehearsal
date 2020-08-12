@@ -1,0 +1,24 @@
+{
+	"name": "fjuse/testbench",
+	"type": "composer-plugin",
+	"authors": [
+		{
+			"name": "cbl",
+			"email": "lennart.carbe@gmail.com"
+		}
+	],
+	"require": {
+		"composer-plugin-api": "^2.0",
+		"orchestra/testbench": "^5.3",
+		"aw-studio/fjord": "^2.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"FjordApp\\": "../../orchestra/testbench-core/laravel/fjord/app",
+			"Fjuse\\Testbench\\": "src/"
+		}
+	},
+	"extra": {
+		"class": "Fjuse\\Testbench\\InstallerPlugin"
+	}
+}
