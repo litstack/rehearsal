@@ -11,21 +11,21 @@
 	"require": {
 		"composer-plugin-api": "^1.1|^2.0",
 		"orchestra/testbench": "^5.3",
-		"aw-studio/fjord": "^2.4"
+		"litstack/litstack": "^3.0"
 	},
 	"autoload": {
 		"psr-4": {
-			"FjordApp\\": "../../orchestra/testbench-core/laravel/fjord/app",
-			"Fjuse\\Testbench\\": "src/"
+			"Lit\\": "../../orchestra/testbench-core/laravel/lit/app",
+			"Litstack\\Rehearsal\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"FjordApp\\": "vendor/orchestra/testbench-core/laravel/fjord/app"
+			"Lit\\": "vendor/orchestra/testbench-core/laravel/lit/app"
 		}
 	},
 	"extra": {
-		"class": "Fjuse\\Testbench\\InstallerPlugin"
+		"class": "Litstack\\Rehearsal\\InstallerPlugin"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "^9.3"
