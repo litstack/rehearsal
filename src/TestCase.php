@@ -16,7 +16,7 @@ class TestCase extends OrchestraTestCase
     {
         return array_merge(
             parent::getApplicationProviders($app),
-            $this->getFjordProviders()
+            $this->getLitstackProviders()
         );
     }
 
