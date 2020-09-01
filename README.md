@@ -1,34 +1,22 @@
-# Fjord Testbench
+# Litstack Rehearsal
 
 An [orchestra](https://github.com/orchestral/testbench) extension to simplify
 testing fjord packages in a laravel application environment that has fjord
 installed.
 
-## Installation
+## Official Documentation
 
-Install the package via composer:
+Documentation for Rehearsal can be found on
+[litstack.io](https://litstack.io/docs/packages/rehearsal).
 
-```shell
-composer require --dev fjuse/testbench
-```
+## Contributing
 
-## Usage
+We are happy that you are considering about contributing to the project.
+Checkout the contribution guide on
+[litstack.io](https://litstack.io/docs/contributing). Contributions of any kind
+welcome!
 
-To run tests in a fjord environment, your test class only needs to extend
-`Fjuse\Testbench\TestCase`.
+## License
 
-```php
-use Fjuse\Testbench\TestCase as FjordTestCase;
-
-class TestCase extends FjordTestCase
-{
-    public function test_fjord_is_installed()
-    {
-        $this->assertTrue(fjord()->installed());
-    }
-}
-```
-
-This testcase is an extension of `Orchestra\Testbench\TestCase`. All its
-functions can be used. Read more on how to test your packages in the
-[orchestra docs](https://github.com/orchestral/testbench)
+Litstack Rehearsal is open-sourced software licensed under the
+[MIT license](LICENSE.md).

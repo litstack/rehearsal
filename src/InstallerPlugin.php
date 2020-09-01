@@ -1,6 +1,6 @@
 <?php
 
-namespace Fjuse\Testbench;
+namespace Litstack\Rehearsal;
 
 use Composer\Composer;
 use Composer\EventDispatcher\EventSubscriberInterface;

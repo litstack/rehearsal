@@ -7,6 +7,6 @@ if (! realpath($autoload = __DIR__.'/../../../autoload.php')) {
 
 require $autoload;
 
-use Fjuse\Testbench\Installer;
+use Litstack\Rehearsal\Installer;
 
 echo (new Installer())->install();

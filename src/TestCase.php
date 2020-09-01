@@ -1,6 +1,6 @@
 <?php
 
-namespace Fjuse\Testbench;
+namespace Litstack\Rehearsal;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 

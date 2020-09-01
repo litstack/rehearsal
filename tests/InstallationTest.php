@@ -1,13 +1,13 @@
 <?php
 
-use Fjord\Support\Facades\Fjord;
-use Fjuse\Testbench\TestCase;
+use Ignite\Support\Facades\Lit;
+use Litstack\Rehearsal\TestCase;
 
 class InstallationTest extends TestCase
 {
     /** @test */
-    public function test_fjord_is_installed()
+    public function test_litstack_is_installed()
     {
-        $this->assertTrue(Fjord::installed());
+        $this->assertTrue(Lit::installed());
     }
 }

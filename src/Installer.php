@@ -1,6 +1,6 @@
 <?php
 
-namespace Fjuse\Testbench;
+namespace Litstack\Rehearsal;
 
 use Fjord\Fjord\Discover\PackageDiscoverCommand;
 use Fjord\Support\Facades\Fjord;
