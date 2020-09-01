@@ -13,8 +13,8 @@ Documentation for Rehearsal can be found on
 
 We are happy that you are considering about contributing to the project.
 Checkout the contribution guide on
-[litstack.io](https://litstack.io/docs/contributing). Contributions of any kind
-welcome!
+[litstack.io](https://litstack.io/docs/prologue/contributing). Contributions of
+any kind welcome!
 
 ## License
 
