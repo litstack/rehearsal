@@ -25,9 +25,10 @@ class TestCase extends OrchestraTestCase
      *
      * @return array
      */
-    protected function getFjordProviders()
+    protected function getLitstackProviders()
     {
         return [
+            \Livewire\LivewireServiceProvider::class
             \Cviebrock\EloquentSluggable\ServiceProvider::class,
             \Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
             \Spatie\Permission\PermissionServiceProvider::class,
