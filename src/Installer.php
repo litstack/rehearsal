@@ -2,8 +2,7 @@
 
 namespace Litstack\Rehearsal;
 
-use Fjord\Fjord\Discover\PackageDiscoverCommand;
-use Fjord\Support\Facades\Fjord;
+use Ignite\Support\Facades\Lit;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithConsole;
 use Orchestra\Testbench\Concerns\CreatesApplication;
 use PHPUnit\Framework\TestCase;
@@ -52,18 +51,12 @@ class Installer extends TestCase
             $this->app = $this->createApplication()
         );
 
-        if (Fjord::installed()) {
+        if (Lit::installed()) {
             return false;
         }
 
         try {
-            $this->artisan('fjord:install');
-        } catch (Throwable $e) {
-            return false;
-        }
-
-        try {
-            $this->discoverFjordPackages();
+            $this->artisan('lit:install');
         } catch (Throwable $e) {
             return false;
         }
@@ -79,25 +72,12 @@ class Installer extends TestCase
      */
     public function register($app)
     {
+        $app->register(\Livewire\LivewireServiceProvider::class);
         $app->register(\Cviebrock\EloquentSluggable\ServiceProvider::class);
         $app->register(\Spatie\MediaLibrary\MediaLibraryServiceProvider::class);
         $app->register(\Spatie\Permission\PermissionServiceProvider::class);
         $app->register(\Astrotomic\Translatable\TranslatableServiceProvider::class);
-        $app->register(\Fjord\FjordServiceProvider::class);
-    }
-
-    /**
-     * Discover fjord packages and write manifest.
-     *
-     * @return void
-     */
-    protected function discoverFjordPackages()
-    {
-        $finder = new PackageDiscoverCommand();
-
-        $finder->write(
-            $finder->findFjordPackages($this->vendorPath())
-        );
+        $app->register(\Ignite\Foundation\LitstackServiceProvider::class);
     }
 
     /**
