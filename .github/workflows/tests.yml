@@ -20,8 +20,8 @@ jobs:
                 include:
                     - laravel: 7.*
                       testbench: 5.*
-                    - laravel: 7.*
-                      testbench: 5.*
+                    - laravel: 8.*
+                      testbench: 6.*
 
         name:
             P${{ matrix.php }} - C:${{ matrix.composer }} - L${{ matrix.laravel
