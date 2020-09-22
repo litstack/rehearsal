@@ -15,7 +15,7 @@ jobs:
             matrix:
                 php: [7.4]
                 composer: [v1, v2]
-                litstack: [3.0]
+                litstack: [3.*]
                 laravel: [7.*]
                 include:
                     - laravel: 7.*
