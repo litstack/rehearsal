@@ -28,7 +28,7 @@ class TestCase extends OrchestraTestCase
     protected function getLitstackProviders()
     {
         return [
-            \Livewire\LivewireServiceProvider::class
+            \Livewire\LivewireServiceProvider::class,
             \Cviebrock\EloquentSluggable\ServiceProvider::class,
             \Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
             \Spatie\Permission\PermissionServiceProvider::class,
