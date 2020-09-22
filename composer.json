@@ -36,7 +36,8 @@
 	"scripts": {
 		"post-autoload-dump": [
 			"@php bin/install"
-		]
+		],
+		"test": "vendor/bin/phpunit"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true
