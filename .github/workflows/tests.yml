@@ -25,7 +25,7 @@ jobs:
 
         name:
             P${{ matrix.php }} - C:${{ matrix.composer }} - L${{ matrix.laravel
-            }} - Lit${{ matrix.fjord }}
+            }} - Lit${{ matrix.litstack }}
 
         steps:
             - name: checkout
