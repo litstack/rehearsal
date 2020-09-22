@@ -33,7 +33,7 @@ class TestCase extends OrchestraTestCase
             \Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
             \Spatie\Permission\PermissionServiceProvider::class,
             \Astrotomic\Translatable\TranslatableServiceProvider::class,
-            \Fjord\FjordServiceProvider::class,
+            \Ignite\Foundation\LitstackServiceProvider::class,
         ];
     }
 }
