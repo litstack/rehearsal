@@ -1,7 +1,7 @@
 # Litstack Rehearsal
 
 An [orchestra](https://github.com/orchestral/testbench) extension to simplify
-testing fjord packages in a laravel application environment that has fjord
+testing litstack packages in a laravel application environment that has litstack
 installed.
 
 ## Official Documentation
